@@ -1,5 +1,6 @@
-package com.example.sbadmin01.login;
+package com.example.sbadmin01.study.exception;
 
+import com.example.sbadmin01.login.APIController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -7,8 +8,8 @@ import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@RestControllerAdvice
-public class GlobalControllerAdvice {
+@RestControllerAdvice(basePackageClasses = APIController.class)
+public class APIControllerAdvice {
 
     @ExceptionHandler(value=Exception.class)
     public ResponseEntity exception(Exception e){
