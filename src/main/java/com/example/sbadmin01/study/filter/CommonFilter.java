@@ -17,8 +17,8 @@ import java.io.IOException;
  * 주로 request, response Logging용도로 활용하거나 , 인증과 관련된 Logic 처리
  */
 @Slf4j
-@Component
-@WebFilter(urlPatterns = "/study/api/*")
+//@Component
+//@WebFilter(urlPatterns = "/study/api/*")
 public class CommonFilter implements Filter{
 
     @Override
